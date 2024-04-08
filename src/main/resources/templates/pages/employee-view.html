@@ -1,0 +1,29 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+    <title>View Detail</title>
+</head>
+<body>
+
+<div class="max-w-sm mt-8 mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex justify-center px-4 pt-4">
+        <div class="flex flex-col items-center pb-10">
+            <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="https://i.pinimg.com/originals/46/6e/e9/466ee90e5fd096df9da0d80e546684a0.jpg" alt="Bonnie image"/>
+            <h5 th:text="${employee.firstName}" class="mb-1 text-xl font-medium text-gray-900 dark:text-white">First Name</h5>
+            <span th:text="${employee.lastName}" class="text-sm text-gray-500 dark:text-gray-400">Last Name</span>
+            <span th:text="${employee.email}" class="text-sm text-gray-500 dark:text-gray-400">Email</span>
+            <div class="flex mt-4 space-x-3 md:mt-6">
+                <a th:href="@{/employees/all}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
